@@ -1,5 +1,9 @@
 #
-# Lipid double layer with water over and below
+# Sphingomyelin double layer with water over and below
+#
+# You can edit the x and y dimension for each of the layers.
+#
+# Have fun! \(^,^)/
 #
 
 tolerance 2.0 
