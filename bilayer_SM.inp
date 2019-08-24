@@ -1,0 +1,42 @@
+#
+# Lipid double layer with water over and below
+#
+
+tolerance 2.0 
+filetype pdb
+output bilayer_11.pdb
+
+structure water.pdb 
+  number 2000
+  inside box 0. 0. -15.5 62.2 62.2 0.
+end structure
+
+structure water.pdb 
+  number 2000
+  inside box 0. 0. 74. 62.2 62.2 89.5
+end structure
+
+structure sphingomyelin.pdb
+  number 128
+  inside box 0. 0. 0. 62.2 62.2 37.
+  atoms 11
+    below plane 0. 0. 1. 2.
+  end atoms
+  atoms 34
+    over plane 0. 0. 1. 35 
+  end atoms
+end structure 
+
+structure sphingomyelin.pdb
+  number 128
+  inside box 0. 0. 37. 62.2 62.2 74.
+  atoms 34
+    below plane 0. 0. 1. 39.
+  end atoms
+  atoms 11
+    over plane 0. 0. 1. 72 
+  end atoms
+end structure
+
+
+
